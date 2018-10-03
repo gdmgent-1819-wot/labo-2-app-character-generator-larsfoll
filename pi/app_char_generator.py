@@ -1,10 +1,14 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
+from sense_hat import SenseHat
+sense = SenseHat()
 
 cred = credentials.Certificate('../services/firebase.json')
-default_app = firebase_admin.initialize_app(cred)
+default_app = firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://wot-larsfoll.firebaseio.com/'
+})
 
-ref = db.reference('characters')
+character = db.reference('characters/character').get()
 
-print(ref.get())
+sense.set_pixels(character)
