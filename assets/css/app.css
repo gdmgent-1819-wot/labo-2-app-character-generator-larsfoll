@@ -33,13 +33,3 @@ h1 {
   border-radius: 5px;
   box-sizing: border-box;
 }
-
-button {
-  margin: 1em 0 0 0;
-  padding: 1em;
-  background-color: #8FFF8A;
-  border-radius: 5px;
-  color: black;
-  border: 0;
-  outline: 0;
-}

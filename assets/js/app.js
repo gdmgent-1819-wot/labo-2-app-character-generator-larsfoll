@@ -5,7 +5,7 @@ const characterGeneratorWrapper = document.getElementById('character-generator-w
 
 const colorsArray = [];
 for(let i = 1; i <= 64; i++) {
-  colorsArray.push([255, 255, 255]);
+  colorsArray.push([0, 0, 0]);
 }
 
 const clickableGrid = (rows, cols) => {
@@ -16,14 +16,14 @@ const clickableGrid = (rows, cols) => {
     const tr = grid.appendChild(document.createElement('tr'));
     for (let c = 0; c < cols; ++c) {
       const cell = tr.appendChild(document.createElement('td'));
-      cell.style.backgroundColor = 'rgb(255, 255, 255)';
+      cell.style.backgroundColor = 'rgb(0, 0, 0)';
       ++i;
       cell.addEventListener('click', ((el, r, c, i) => {
         return () => {
           const chosenColor = colorPicker.value;
-          el.style.backgroundColor == 'rgb(255, 255, 255)' ?
+          el.style.backgroundColor == 'rgb(0, 0, 0)' ?
           el.style.backgroundColor = `#${chosenColor}` :
-          el.style.backgroundColor = 'rgb(255, 255, 255)';
+          el.style.backgroundColor = 'rgb(0, 0, 0)';
           setColor(i);
         }
       })(cell, r, c, i), false);
@@ -32,7 +32,7 @@ const clickableGrid = (rows, cols) => {
   return grid;
 }
 
-let rgb = [0, 0, 0];
+let rgb = [255, 255, 255];
 
 const update = (picker) => {
   const r = Math.round(picker.rgb[0]);
