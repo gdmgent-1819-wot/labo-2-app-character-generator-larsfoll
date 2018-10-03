@@ -6,7 +6,7 @@ sense = SenseHat()
 
 cred = credentials.Certificate('../services/firebase.json')
 default_app = firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://wot-larsfoll.firebaseio.com/'
+  'databaseURL': 'https://wot-larsfoll.firebaseio.com/'
 })
 
 character = db.reference('characters/character').get()

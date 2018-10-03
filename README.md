@@ -1,3 +1,8 @@
+### Project description
+
+App with which you can create arcade characters and visualize them on a Raspberry Pi.
+Visit the following [site](https://larsfoll.github.io/) for the UI.
+
 ### Naam
 
 Lars Follet
@@ -5,27 +10,3 @@ Lars Follet
 ### Opleidingsonderdeel
 
 Web Of Things
-
-### Docent
-
-Philippe De Pauw - Waterschoot
-
-### Academiejaar
-
-2018-2019
-
-### Opleiding
-
-Bachelor in de grafische en digitale media
-
-### Afstudeerrichting
-
-Multimediaproductie
-
-### Keuzeoptie
-
-New Media Development
-
-### Opleidingsinstelling
-
-Arteveldehogeschool
