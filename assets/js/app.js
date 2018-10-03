@@ -6,6 +6,7 @@ const characterGeneratorWrapper = document.getElementById('character-generator-w
 const colorsArray = [];
 for(let i = 1; i <= 64; i++) {
   colorsArray.push([0, 0, 0]);
+  db.ref('characters/').set({character: colorsArray});
 }
 
 const clickableGrid = (rows, cols) => {
