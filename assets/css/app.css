@@ -1,0 +1,46 @@
+#character-generator-wrapper {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+.grid {
+  margin: 1em auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.grid td {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 13px;
+    background-color: white;
+}
+
+#color-picker {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  margin: 1em 0 0 0;
+  padding: 1em;
+  background-color: #8FFF8A;
+  border-radius: 5px;
+  color: black;
+  border: 0;
+  outline: 0;
+}

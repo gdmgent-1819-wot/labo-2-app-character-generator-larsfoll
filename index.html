@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="assets/css/app.css" rel="stylesheet" type="text/css"></link>
+  <title>Character generator</title>
+</head>
+<body>
+  <div id="character-generator-wrapper">
+    <h1>Create your arcade character</h1>
+    <input class="jscolor" id="color-picker" value="000000">
+    <button type="submit" id="btn-submit-character">Send to Raspberry Pi</button>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAEV16BDnJzCQ967Zpfj7zvA-pGzg63aLc",
+      authDomain: "wot-larsfoll.firebaseapp.com",
+      databaseURL: "https://wot-larsfoll.firebaseio.com",
+      projectId: "wot-larsfoll",
+      storageBucket: "wot-larsfoll.appspot.com",
+      messagingSenderId: "108617881933"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="./assets/js/jscolor-2.0.5/jscolor.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
