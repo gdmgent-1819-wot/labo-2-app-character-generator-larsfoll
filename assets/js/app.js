@@ -5,7 +5,7 @@ const characterGeneratorWrapper = document.getElementById('character-generator-w
 
 const colorsArray = [];
 for(let i = 1; i <= 64; i++) {
-  colorsArray.push('rgb(255, 255, 255)');
+  colorsArray.push([255, 255, 255]);
 }
 
 const clickableGrid = (rows, cols) => {
@@ -24,9 +24,7 @@ const clickableGrid = (rows, cols) => {
           el.style.backgroundColor == 'rgb(255, 255, 255)' ?
           el.style.backgroundColor = `#${chosenColor}` :
           el.style.backgroundColor = 'rgb(255, 255, 255)';
-          let firebaseValue = el.style.backgroundColor.substr(4).slice(0, -1);
-          firebaseValue = `[${firebaseValue}]`;
-          setColor(i, firebaseValue);
+          setColor(i);
         }
       })(cell, r, c, i), false);
     }
@@ -34,8 +32,17 @@ const clickableGrid = (rows, cols) => {
   return grid;
 }
 
-const setColor = (index, color) => {
-  colorsArray[index-1] = color;
+let rgb = [0, 0, 0];
+
+const update = (picker) => {
+  const r = Math.round(picker.rgb[0]);
+  const g = Math.round(picker.rgb[1]);
+  const b = Math.round(picker.rgb[2]);
+  rgb = [r, g, b];
+}
+
+const setColor = (index) => {
+  colorsArray[index-1] = rgb;
   db.ref('characters/').set({character: colorsArray});
 }
 
